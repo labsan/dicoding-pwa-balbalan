@@ -3,7 +3,7 @@ const registerSW = () => {
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', () => {
 			navigator.serviceWorker
-				.register('../../serviceworker.js').then(() => {
+				.register('../serviceworker.js').then(() => {
 					console.log('Serviceworker berhasil terdaftar!.');
 				})
 				.catch(error => {
