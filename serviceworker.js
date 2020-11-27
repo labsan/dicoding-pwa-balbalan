@@ -217,7 +217,7 @@ self.addEventListener('push', event => {
     event.waitUntil(
         self.registration.showNotification('Notifikasi Push', {
             body: body,
-            icon: '.images/maskable_icon-192x192-v2.png',
+            icon: 'images/maskable_icon-192x192-v2.png',
             vibrate: [100, 50, 100],
             data: {
                 dateOfArrival: Date.now(),
