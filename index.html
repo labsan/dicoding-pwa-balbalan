@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- META TAG -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Learn Second PWA for Submission 2" />
+		<meta name="theme-color" content="#FFF8E1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#FFF8E1" />
+		<meta name="apple-mobile-web-app-title" content="Balbalan App" />
+
+		<!-- Web Title -->
+		<title>Balbalan App | Learn PWA for Submission 2</title>
+
+		<!-- Import Manifest -->
+		<link rel="manifest" href="/manifest.json" />
+
+		<!-- Icon Device iOS -->
+		<link rel="apple-touch-icon" href="images/maskable_icon_apple-192x192-v2.png" />
+
+		<!-- Icon Device Android -->
+		<link rel="shortcut icon" href="images/maskable_icon-192x192-v2.png" type="image/x-icon" />
+
+		<!-- Import Local CSS -->
+		<link rel="stylesheet" href="/styles/libs/materialize.min.css" />
+		<link rel="stylesheet" href="/styles/custom.css" />
+
+		<!-- Import API Material Icons -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
+
+		<!-- Link preconnect CDN/API to Browser for Improve the Performance of the Web App -->
+		<!-- Global Link preconnect CDN/API -->
+		<link rel="preconnect" href="https://api.football-data.org" />
+		<!-- Link preconnect CDN/API Image Club EPL Football -->
+		<link rel="preconnect" href="https://crests.football-data.org" />
+		<!-- Link preload -->
+		<link rel="preload" as="script" href="/scripts/utils/register-notif.js" crossorigin />
+	</head>
+
+	<body class="amber lighten-5">
+		<header>
+			<nav class="blue darken-4 amber-text lighten-5" role="navigation">
+				<div class="navbar-wrapper container">
+					<a href="#" class="brand-logo" id="logo-container">Balbalan</a>
+					<a href="#" class="sidenav-trigger" data-target="nav-mobile">
+						<i class="material-icons">menu</i>
+					</a>
+
+					<ul class="topnav right hide-on-med-and-down">
+						<li><a class="waves-effect" href="#/pertandingan">Pertandingan</a></li>
+						<li><a class="waves-effect" href="#/klasemen">Klasemen</a></li>
+						<li><a class="waves-effect" href="#/daftar-klub">Daftar Klub</a></li>
+						<li><a class="waves-effect" href="#/favorit-klub">Favorit Klub</a></li>
+					</ul>
+					<ul class="sidenav" id="nav-mobile">
+						<li><a class="waves-effect" href="#/pertandingan">Pertandingan</a></li>
+						<li><a class="waves-effect" href="#/klasemen">Klasemen</a></li>
+						<li><a class="waves-effect" href="#/daftar-klub">Daftar Klub</a></li>
+						<li><a class="waves-effect" href="#/favorit-klub">Favorit Klub</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<div class="fluid-container" id="content"></div>
+		</main>
+
+		<script src="/scripts/libs/materialize.min.js"></script>
+		<script src="/scripts/libs/idb.min.js"></script>
+		<script src="/index.js" type="module"></script>
+	</body>
+</html>

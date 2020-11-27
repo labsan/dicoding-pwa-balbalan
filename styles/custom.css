@@ -1,0 +1,89 @@
+.fluid-container {
+    touch-action: none;
+}
+
+nav .brand-logo, nav i.material-icons {
+    font-size: 18pt !important;
+}
+
+.card {
+    border: 2px solid #6E208D;
+    overflow: hidden;
+}
+
+.card.logo-club .card-image img {
+    position: relative;
+    margin: 25px auto;
+}
+
+/* btn favorite center position */
+.btn {
+    display: block;
+    margin: 10px auto;   
+}
+
+.nama-klub, .txt-pertandingan-klub {
+    color: black;
+}
+
+.nama-klub:hover, .txt-pertandingan-klub:hover {
+    color: #0D47A1;
+    text-decoration: underline !important;
+}
+
+/* Konten Pertandingan */
+table.tbl-pertandingan {
+    border-collapse: unset !important;
+}
+
+.versus-text {
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: #2133AB;
+}
+
+/* info-klub */
+a.info-klub-website {
+    color: #6E208D;
+}
+
+/* Media Query */
+@media (max-width: 425px) {
+    .card.logo-club .card-image img {
+        width: 100px;
+        height: 120px;
+        margin: 10px auto;
+    }
+
+    .btn i {
+        font-size: 1.1em;
+    }
+
+    .btn.btn-hapus, .btn.btn-selengkapnya {
+        font-size: 0.75em;
+    }
+
+    .btn.btn-favorit {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .card.logo-club .card-image img {
+        width: 100px;
+        height: 120px;
+        margin: 10px auto;
+    }
+
+    .btn.btn-favorit {
+        display: block;
+        margin: 0 auto;
+        font-size: 0.8em;
+    }
+
+    .btn.btn-hapus, .btn.btn-selengkapnya {
+        font-size: 0.8em;
+    }
+}
