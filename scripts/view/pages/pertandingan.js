@@ -73,7 +73,7 @@ const Pertandingan = {
                         </tr>
                         <tr>
                             <td colspan="5" class="center">
-                                <img src="../../../images/icon-mola-tv.png" width="24" height="24" alt="Mola TV" />
+                                <img src="images/icon-mola-tv.png" width="24" height="24" alt="Mola TV" />
                             </td>
                         </tr>
                     </tr>
