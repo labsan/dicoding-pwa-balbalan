@@ -1,6 +1,6 @@
-import App from 'scripts/view/App.js';
-import registerSW from 'scripts/utils/register-sw.js';
-import registerNotif from 'scripts/utils/register-notif.js';
+import App from './scripts/view/App.js';
+import registerSW from './scripts/utils/register-sw.js';
+import registerNotif from './scripts/utils/register-notif.js';
 
 // Improve Scrolling Performance
 document.addEventListener('touchstart', () => {}, {
