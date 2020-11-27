@@ -9,97 +9,97 @@ if (workbox) {
         url: '/',
         revision: '1'
     }, {
-        url: '/manifest.json',
+        url: 'manifest.json',
         revision: '1'
     }, {
-        url: '/index.html',
+        url: 'index.html',
         revision: '1'
     }, {
-        url: '/index.js',
+        url: 'index.js',
         revision: '1'
     }, {
-        url: '/push.js',
+        url: 'push.js',
         revision: '1'
     }, {
-        url: '/styles/libs/materialize.min.css',
+        url: 'styles/libs/materialize.min.css',
         revision: '1'
     }, {
-        url: '/styles/custom.css',
+        url: 'styles/custom.css',
         revision: '1'
     }, {
-        url: '/images/icon-mola-tv.png',
+        url: 'images/icon-mola-tv.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon-16x16-v2.png',
+        url: 'images/maskable_icon-16x16-v2.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon-32x32-v2.png',
+        url: 'images/maskable_icon-32x32-v2.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon-96x96-v2.png',
+        url: 'images/maskable_icon-96x96-v2.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon-192x192-v2.png',
+        url: 'images/maskable_icon-192x192-v2.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon_apple-192x192-v2.png',
+        url: 'images/maskable_icon_apple-192x192-v2.png',
         revision: '1'
     }, {
-        url: '/images/maskable_icon-512x512-v2.png',
+        url: 'images/maskable_icon-512x512-v2.png',
         revision: '1'
     }, {
-        url: '/scripts/libs/materialize.min.js',
+        url: 'scripts/libs/materialize.min.js',
         revision: '1'
     }, {
-        url: '/scripts/libs/idb.min.js',
+        url: 'scripts/libs/idb.min.js',
         revision: '1'
     }, {
-        url: '/scripts/data/data-klasemen.js',
+        url: 'scripts/data/data-klasemen.js',
         revision: '1'
     }, {
-        url: '/scripts/data/data-klub.js',
+        url: 'scripts/data/data-klub.js',
         revision: '1'
     }, {
-        url: '/scripts/data/data-favorit-klub.js',
+        url: 'scripts/data/data-favorit-klub.js',
         revision: '1'
     }, {
-        url: '/scripts/routes/route.js',
+        url: 'scripts/routes/route.js',
         revision: '1'
     }, {
-        url: '/scripts/routes/parse-url.js',
+        url: 'scripts/routes/parse-url.js',
         revision: '1'
     }, {
-        url: '/scripts/utils/initiator-drawer.js',
+        url: 'scripts/utils/initiator-drawer.js',
         revision: '1'
     }, {
-        url: '/scripts/utils/register-notif.js',
+        url: 'scripts/utils/register-notif.js',
         revision: '1'
     }, {
-        url: '/scripts/utils/register-sw.js',
+        url: 'scripts/utils/register-sw.js',
         revision: '1'
     }, {
-        url: '/scripts/utils/urlBase64ToUint8Array.js',
+        url: 'scripts/utils/urlBase64ToUint8Array.js',
         revision: '1'
     }, {
-        url: '/scripts/view/App.js',
+        url: 'scripts/view/App.js',
         revision: '1'
     }, {
-        url: '/scripts/view/pages/klasemen.js',
+        url: 'scripts/view/pages/klasemen.js',
         revision: '1'
     }, {
-        url: '/scripts/view/pages/klub.js',
+        url: 'scripts/view/pages/klub.js',
         revision: '1'
     }, {
-        url: '/scripts/view/pages/favorit-klub.js',
+        url: 'scripts/view/pages/favorit-klub.js',
         revision: '1'
     }, {
-        url: '/scripts/view/pages/info-klub.js',
+        url: 'scripts/view/pages/info-klub.js',
         revision: '1'
     }]);
 
     // Routing styles folder
     workbox.routing.registerRoute(
-        new RegExp('/styles/'),
+        new RegExp('styles/'),
         workbox.strategies.cacheFirst({
             cacheName: 'local-styles'
         })
@@ -107,7 +107,7 @@ if (workbox) {
 
     // Routing images folder
     workbox.routing.registerRoute(
-        new RegExp('/images/'),
+        new RegExp('images/'),
         workbox.strategies.cacheFirst({
             cacheName: 'local-images'
         })
@@ -115,7 +115,7 @@ if (workbox) {
 
     // Routing pages folder
     workbox.routing.registerRoute(
-        new RegExp('/scripts/view/pages/'),
+        new RegExp('scripts/view/pages/'),
         workbox.strategies.cacheFirst({
             cacheName: 'local-pages'
         })
@@ -154,7 +154,7 @@ if (workbox) {
 
     // Caching styles folder
     workbox.routing.registerRoute(
-        new RegExp('/styles/'),
+        new RegExp('styles/'),
         workbox.strategies.staleWhileRevalidate({
             cacheName: 'caching-style-files'
         })
@@ -162,7 +162,7 @@ if (workbox) {
 
     // Caching images folder
     workbox.routing.registerRoute(
-        new RegExp('/images/'),
+        new RegExp('images/'),
         workbox.strategies.staleWhileRevalidate({
             cacheName: 'caching-image-files'
         })
@@ -170,7 +170,7 @@ if (workbox) {
 
     // Caching pages folder
     workbox.routing.registerRoute(
-        new RegExp('/scripts/view/pages/'),
+        new RegExp('scripts/view/pages/'),
         workbox.strategies.staleWhileRevalidate({
             cacheName: 'caching-page-files'
         })
@@ -217,7 +217,7 @@ self.addEventListener('push', event => {
     event.waitUntil(
         self.registration.showNotification('Notifikasi Push', {
             body: body,
-            icon: './images/maskable_icon-192x192-v2.png',
+            icon: '.images/maskable_icon-192x192-v2.png',
             vibrate: [100, 50, 100],
             data: {
                 dateOfArrival: Date.now(),
