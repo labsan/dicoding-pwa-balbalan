@@ -14,6 +14,11 @@ window.addEventListener('hashchange', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // Navigasi sidebar
+    const sidenav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenav);
+    
     app.renderPage();
     registerSW();
     registerNotif();
