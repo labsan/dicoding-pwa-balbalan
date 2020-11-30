@@ -1,7 +1,3 @@
-.fluid-container {
-    touch-action: none;
-}
-
 nav .brand-logo, nav i.material-icons {
     font-size: 18pt !important;
 }
