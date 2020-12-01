@@ -3,8 +3,8 @@ import registerSW from './scripts/utils/register-sw.js';
 import registerNotif from './scripts/utils/register-notif.js';
 
 const app = new App({
-    button: document.getElementById('nav-mobile'),
-    drawer: document.querySelectorAll('ul a'),
+    button: document.getElementById('mobile-nav'),
+    drawer: document.querySelectorAll('ul li'),
     content: document.getElementById('content')
 });
 
@@ -13,12 +13,7 @@ window.addEventListener('hashchange', () => {
     app.renderPage();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Navigasi sidebar
-    const sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenav);
-    
+document.addEventListener('DOMContentLoaded', () => {   
     app.renderPage();
     registerSW();
     registerNotif();
